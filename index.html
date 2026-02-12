@@ -1,0 +1,3123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Information and Communication Technology</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#0B1220">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="color-scheme" content="dark light">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Industry-aligned ICT education with hands-on experience in software development, networking, and modern digital systems">
+    <meta name="keywords" content="ICT, software development, networking, computer science, diploma, advanced diploma, technology education">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Department of Information and Communication Technology">
+    <meta property="og:description" content="Industry-aligned ICT education with hands-on experience">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://mut.ac.za/ict">
+    <meta property="og:type" content="website">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@500,600,700&family=General+Sans:wght@400,500,600&display=swap" as="style" crossorigin>
+    <link rel="preload" href="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" as="image">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollegeOrUniversity",
+        "name": "Department of Information and Communication Technology",
+        "description": "Preparing students for careers in software development, networking, and modern digital systems through industry-aligned education and hands-on experience.",
+        "url": "https://mut.ac.za/ict",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "ZA",
+            "addressRegion": "KwaZulu-Natal"
+        },
+        "department": {
+            "@type": "EducationalOrganization",
+            "name": "ICT Department",
+            "parentOrganization": "Mangosuthu University of Technology"
+        }
+    }
+    </script>
+    
+    <style>
+        /* ===== CSS RESET & BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-bg: #0B1220;
+            --secondary-bg: #111827;
+            --primary-accent: #2563EB;
+            --secondary-accent: #22C55E;
+            --text-primary: #E5E7EB;
+            --text-secondary: #9CA3AF;
+            --card-bg: #1F2937;
+            --overlay-dark: rgba(0, 0, 0, 0.95);
+            --spacing-unit: 8px;
+            --container-padding: 16px;
+            --border-radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --nav-height: 80px;
+            --nav-height-mobile: 70px;
+            --nav-hidden: -100px;
+            --chatbot-primary: #2563EB;
+            --chatbot-secondary: #22C55E;
+            --chatbot-bg: #1F2937;
+            --chatbot-text: #E5E7EB;
+            --chatbot-user: #2563EB;
+            --chatbot-bot: #374151;
+        }
+
+        [data-theme="light"] {
+            --primary-bg: #F9FAFB;
+            --secondary-bg: #FFFFFF;
+            --primary-accent: #2563EB;
+            --secondary-accent: #16A34A;
+            --text-primary: #111827;
+            --text-secondary: #4B5563;
+            --card-bg: #F3F4F6;
+            --overlay-dark: rgba(255, 255, 255, 0.95);
+            --chatbot-bg: #FFFFFF;
+            --chatbot-text: #111827;
+            --chatbot-bot: #F3F4F6;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: calc(var(--nav-height) + 20px);
+        }
+
+        body {
+            font-family: 'General Sans', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-size: 16px;
+            font-smooth: always;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            min-height: 100vh;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Modern Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--secondary-bg);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+            border-radius: 10px;
+            border: 3px solid var(--secondary-bg);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #1d4ed8, #16a34a);
+        }
+
+        /* Firefox scrollbar */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-accent) var(--secondary-bg);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Clash Display', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.625rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .container {
+            width: 100%;
+            padding: 0 var(--container-padding);
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav-container {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(17, 24, 39, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+            height: var(--nav-height);
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container.hidden {
+            transform: translateY(var(--nav-hidden));
+        }
+
+        [data-theme="light"] .nav-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            height: 100%;
+        }
+
+        .logo {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        .logo i {
+            color: var(--primary-accent);
+            font-size: 1.75rem;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.25rem;
+            cursor: pointer;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .theme-toggle:hover {
+            background-color: rgba(37, 99, 235, 0.1);
+            transform: rotate(30deg);
+        }
+
+        .theme-toggle i {
+            transition: transform 0.3s ease;
+        }
+
+        .theme-toggle:hover i {
+            transform: scale(1.1);
+        }
+
+        .hamburger {
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.5rem;
+            transition: var(--transition);
+            display: none;
+        }
+
+        .hamburger:hover {
+            background-color: rgba(37, 99, 235, 0.1);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+
+        .nav-menu a i {
+            color: var(--primary-accent);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-accent);
+        }
+
+        .nav-menu a:hover i {
+            transform: translateY(-2px);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent));
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== HEADER WITH EXTREMELY DARK BACKGROUND ===== */
+        .header-container {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: var(--nav-height);
+        }
+
+        .header-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .header-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0.95) 50%, rgba(37, 99, 235, 0.3) 100%);
+            z-index: 1;
+        }
+
+        .header-background::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .header-background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.35) contrast(1.3);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 2rem;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .header-content p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+            font-weight: 400;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .header-info-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            padding: 1rem 2rem;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 100px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            margin-top: 3rem;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ===== ENHANCED CAROUSEL WITH HOVER TEXT ===== */
+        .journey-section {
+            background-color: var(--primary-bg);
+            padding: 5rem 0;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 1rem 0;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            animation: scrollLeft 40s linear infinite;
+            width: fit-content;
+        }
+
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        .carousel-item {
+            position: relative;
+            width: 350px;
+            height: 250px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .carousel-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.98), rgba(37, 99, 235, 0.4));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .carousel-item:hover .carousel-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .carousel-overlay h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            transform: translateY(20px);
+            transition: transform 0.4s ease 0.1s;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-item:hover .carousel-overlay h3 {
+            transform: translateY(0);
+        }
+
+        .carousel-overlay p {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            transform: translateY(20px);
+            transition: transform 0.4s ease 0.2s;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-item:hover .carousel-overlay p {
+            transform: translateY(0);
+        }
+
+        @keyframes scrollLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-350px * 5 - 1.5rem * 5)); }
+        }
+
+        /* ===== FORM STYLES ===== */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.75rem;
+            color: var(--text-primary);
+            font-family: 'General Sans', sans-serif;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        [data-theme="light"] .form-control {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-accent);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        @media (max-width: 640px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== RESPONSIVE NAVIGATION ===== */
+        @media (max-width: 1024px) {
+            .nav-menu {
+                position: fixed;
+                top: var(--nav-height-mobile);
+                left: 0;
+                width: 100%;
+                background-color: var(--secondary-bg);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+                transform: translateY(-150%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                z-index: 999;
+                backdrop-filter: blur(10px);
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-menu a {
+                width: 100%;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                font-size: 0.9rem;
+            }
+
+            .nav-menu a:hover {
+                background-color: rgba(37, 99, 235, 0.1);
+            }
+
+            .nav-menu a::after {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-container {
+                height: var(--nav-height-mobile);
+            }
+
+            .logo {
+                font-size: 1.25rem;
+            }
+
+            .logo i {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* ===== CHATBOT ASSISTANT STYLES ===== */
+        .chatbot-container {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .chatbot-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+            border: none;
+            color: white;
+            font-size: 1.75rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+            position: relative;
+            z-index: 10000;
+        }
+
+        .chatbot-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        .chatbot-button i {
+            transition: transform 0.3s ease;
+        }
+
+        .chatbot-button:hover i {
+            transform: rotate(10deg);
+        }
+
+        .chatbot-panel {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 500px;
+            background: var(--chatbot-bg);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            animation: slideIn 0.3s ease;
+        }
+
+        .chatbot-panel.active {
+            display: flex;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chatbot-header {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-accent), #1e40af);
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .chatbot-header i {
+            font-size: 2rem;
+        }
+
+        .chatbot-header h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            color: white;
+        }
+
+        .chatbot-header p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background: var(--chatbot-bg);
+        }
+
+        .message {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            max-width: 85%;
+            animation: messageSlide 0.3s ease;
+        }
+
+        @keyframes messageSlide {
+            from {
+                opacity: 0;
+                transform: translateX(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .message.user {
+            align-self: flex-end;
+            flex-direction: row-reverse;
+        }
+
+        .message-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--chatbot-bot);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .message.user .message-avatar {
+            background: var(--chatbot-user);
+            color: white;
+        }
+
+        .message-content {
+            padding: 0.75rem 1rem;
+            border-radius: 18px;
+            background: var(--chatbot-bot);
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .message.user .message-content {
+            background: var(--chatbot-user);
+            color: white;
+        }
+
+        .message-content p {
+            margin: 0;
+            color: inherit;
+        }
+
+        .message-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .chatbot-input {
+            padding: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            gap: 0.75rem;
+            background: var(--chatbot-bg);
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            background: var(--card-bg);
+            color: var(--text-primary);
+            font-family: 'General Sans', sans-serif;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .chatbot-input input:focus {
+            outline: none;
+            border-color: var(--primary-accent);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .chatbot-input input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .chatbot-input button {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+            border: none;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chatbot-input button:hover {
+            transform: scale(1.1);
+        }
+
+        .chatbot-input button i {
+            transition: transform 0.3s ease;
+        }
+
+        .chatbot-input button:hover i {
+            transform: rotate(15deg);
+        }
+
+        .quick-replies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding: 0 1rem 1rem;
+        }
+
+        .quick-reply-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--primary-accent);
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .quick-reply-btn:hover {
+            background: var(--primary-accent);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 480px) {
+            .chatbot-panel {
+                width: 300px;
+                height: 450px;
+                right: 0;
+            }
+
+            .chatbot-container {
+                right: 1rem;
+                bottom: 1rem;
+            }
+        }
+
+        /* ===== REST OF YOUR EXISTING STYLES ===== */
+        .stats-section {
+            background-color: var(--secondary-bg);
+            padding: 4rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            font-family: 'Clash Display', sans-serif;
+            background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .about-section {
+            background-color: var(--primary-bg);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+            height: 400px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-icon {
+            width: 3rem;
+            height: 3rem;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon i {
+            font-size: 1.5rem;
+            color: var(--secondary-accent);
+        }
+
+        .programmes-section {
+            background-color: var(--secondary-bg);
+        }
+
+        .programme-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .programme-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .programme-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .programme-meta {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .programme-card .btn {
+            margin-top: auto;
+            align-self: flex-start;
+        }
+
+        .specialization-section {
+            background-color: var(--primary-bg);
+        }
+
+        .specialization-blocks {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .specialization-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .specialization-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .block-content {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .block-content h3 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .block-content h3 i {
+            font-size: 2rem;
+            color: var(--primary-accent);
+        }
+
+        .block-image {
+            height: 100%;
+            min-height: 400px;
+            overflow: hidden;
+        }
+
+        .block-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .specialization-block:hover .block-image img {
+            transform: scale(1.1);
+        }
+
+        .facilities-section {
+            background-color: var(--secondary-bg);
+        }
+
+        .facilities-banner {
+            position: relative;
+            height: 400px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-bottom: 3rem;
+        }
+
+        .facilities-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .facilities-banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.5), rgba(0, 0, 0, 0.8));
+        }
+
+        .banner-text {
+            position: absolute;
+            bottom: 3rem;
+            left: 3rem;
+            z-index: 2;
+            color: white;
+        }
+
+        .banner-text h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .facility-item {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .facility-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .facility-item i {
+            font-size: 2.5rem;
+            color: var(--secondary-accent);
+            margin-bottom: 1rem;
+        }
+
+        .careers-section {
+            background-color: var(--primary-bg);
+        }
+
+        .careers-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .career-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .career-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .career-icon {
+            width: 4rem;
+            height: 4rem;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .career-icon i {
+            font-size: 2rem;
+            color: var(--primary-accent);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-accent), #1e40af);
+            text-align: center;
+            padding: 5rem 0;
+            color: white;
+        }
+
+        .cta-content h2 {
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-content p {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2rem;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-accent);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-accent);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-accent);
+            border: 2px solid var(--primary-accent);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-accent);
+            color: white;
+        }
+
+        footer {
+            background-color: var(--secondary-bg);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+        }
+
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .contact-info i {
+            color: var(--primary-accent);
+            width: 1.25rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-icons a {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--card-bg);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            background: var(--primary-accent);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--card-bg);
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            overflow-y: auto;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: var(--secondary-bg);
+            border-radius: var(--border-radius);
+            width: 90%;
+            max-width: 600px;
+            margin: 2rem auto;
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--card-bg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.25rem;
+            cursor: pointer;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            background: var(--card-bg);
+            color: var(--text-primary);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .success-message {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid var(--secondary-accent);
+            color: var(--secondary-accent);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .success-message.active {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 1rem;
+            height: 1rem;
+            accent-color: var(--primary-accent);
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .stats-grid,
+            .info-cards,
+            .programme-cards,
+            .facilities-grid,
+            .careers-grid,
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-content,
+            .specialization-block {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                height: 300px;
+            }
+
+            .block-image {
+                min-height: 300px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid,
+            .info-cards,
+            .programme-cards,
+            .facilities-grid,
+            .careers-grid,
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .header-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .header-info-bar {
+                flex-direction: column;
+                gap: 1rem;
+                border-radius: var(--border-radius);
+                width: 100%;
+            }
+
+            .header-content h1 {
+                font-size: 2rem;
+            }
+
+            .header-content p {
+                font-size: 1rem;
+            }
+
+            .carousel-item {
+                width: 280px;
+                height: 200px;
+            }
+
+            .facilities-banner {
+                height: 300px;
+            }
+
+            .banner-text {
+                left: 1.5rem;
+                bottom: 1.5rem;
+            }
+
+            .banner-text h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+
+            .carousel-item {
+                width: 260px;
+                height: 180px;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+
+        .animated-gradient {
+            background: linear-gradient(135deg, var(--primary-accent), var(--secondary-accent), #8b5cf6);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradient 3s ease infinite;
+        }
+
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .focus-visible:focus-visible {
+            outline: 2px solid var(--primary-accent);
+            outline-offset: 2px;
+        }
+
+        .loading {
+            opacity: 0.7;
+            pointer-events: none;
+            position: relative;
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1rem;
+            height: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+            margin-left: 0.5rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container" id="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>ICT Department</span>
+            </div>
+            <div class="nav-right">
+                <button class="theme-toggle focus-visible" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger focus-visible" id="hamburger" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="focus-visible">
+                    <i class="fas fa-home"></i>
+                    HOME
+                </a>
+                <a href="#about" class="focus-visible">
+                    <i class="fas fa-info-circle"></i>
+                    ABOUT
+                </a>
+                <a href="#programmes" class="focus-visible">
+                    <i class="fas fa-graduation-cap"></i>
+                    PROGRAMMES
+                </a>
+                <a href="#stats" class="focus-visible">
+                    <i class="fas fa-chart-line"></i>
+                    STATS
+                </a>
+                <a href="#specializations" class="focus-visible">
+                    <i class="fas fa-code-branch"></i>
+                    SPECIALIZATIONS
+                </a>
+                <a href="#facilities" class="focus-visible">
+                    <i class="fas fa-building"></i>
+                    FACILITIES
+                </a>
+                <a href="#journey" class="focus-visible">
+                    <i class="fas fa-images"></i>
+                    JOURNEY
+                </a>
+                <a href="#careers" class="focus-visible">
+                    <i class="fas fa-briefcase"></i>
+                    CAREERS
+                </a>
+                <a href="#contact" class="focus-visible">
+                    <i class="fas fa-envelope"></i>
+                    CONTACT
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header with EXTREMELY DARK Background -->
+    <header class="header-container" id="home">
+        <div class="header-background">
+            <picture>
+                <source srcset="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&fm=webp" type="image/webp">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+                     alt="African university students collaborating in modern ICT laboratory"
+                     loading="eager">
+            </picture>
+        </div>
+        <div class="container header-content">
+            <h1 class="animated-gradient">Department of Information and Communication Technology</h1>
+            <p>Preparing students for careers in software development, networking, and modern digital systems through industry-aligned education and hands-on experience.</p>
+            <div class="header-buttons">
+                <a href="#programmes" class="btn btn-primary focus-visible">
+                    <i class="fas fa-book-open"></i>
+                    View Programmes
+                </a>
+                <a href="#" class="btn btn-secondary focus-visible" id="contactDeptBtn">
+                    <i class="fas fa-envelope"></i>
+                    Contact Department
+                </a>
+            </div>
+            <div class="header-info-bar">
+                <div class="weather-info">
+                    <i class="fas fa-cloud"></i>
+                    <span>26°C Mostly cloudy</span>
+                </div>
+                <div class="time-info">
+                    <i class="far fa-clock"></i>
+                    <span>ENG 00:35</span>
+                </div>
+                <div class="date-info">
+                    <i class="far fa-calendar"></i>
+                    <span>2026/02/10</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Statistics Section -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <h2 class="section-title fade-in-up animated-gradient">Our Impact in Numbers</h2>
+            <div class="stats-grid">
+                <div class="stat-item fade-in-up stagger-delay-1">
+                    <div class="stat-number" data-count="95">0</div>
+                    <div class="stat-label">Graduate Employment Rate</div>
+                </div>
+                <div class="stat-item fade-in-up stagger-delay-2">
+                    <div class="stat-number" data-count="1500">0</div>
+                    <div class="stat-label">Active Alumni</div>
+                </div>
+                <div class="stat-item fade-in-up stagger-delay-3">
+                    <div class="stat-number" data-count="25">0</div>
+                    <div class="stat-label">Industry Partners</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-in-up">
+                    <h2 class="animated-gradient">About Our Department</h2>
+                    <p>Established in 2005, the Department of Information and Communication Technology at Mangosuthu University of Technology is a leading institution in digital education. We bridge the gap between academic theory and industry practice.</p>
+                    <p>Our faculty consists of experienced professionals and researchers who bring real-world expertise into the classroom. We maintain strong partnerships with leading tech companies to ensure our curriculum remains relevant and cutting-edge.</p>
+                </div>
+                <div class="about-image fade-in-up stagger-delay-1">
+                    <picture>
+                        <source srcset="https://i.postimg.cc/J4QWqJxD/60e1f8bd516d4d41b0b30e1491c940a0.webp" type="image/webp">
+                        <img src="https://i.postimg.cc/J4QWqJxD/60e1f8bd516d4d41b0b30e1491c940a0.jpg" 
+                             alt="Diverse group of students collaborating on computers"
+                             loading="lazy">
+                    </picture>
+                </div>
+            </div>
+            <div class="info-cards">
+                <div class="info-card fade-in-up stagger-delay-2">
+                    <div class="card-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Industry-aligned Curriculum</h3>
+                    <p>Our courses are continuously updated with input from industry partners including Microsoft, Cisco, and local tech companies.</p>
+                </div>
+                <div class="info-card fade-in-up stagger-delay-3">
+                    <div class="card-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Practical Laboratory Learning</h3>
+                    <p>24/7 access to state-of-the-art labs equipped with the latest hardware, software, and networking equipment.</p>
+                </div>
+                <div class="info-card fade-in-up stagger-delay-4">
+                    <div class="card-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Qualified Academic Staff</h3>
+                    <p>Learn from PhD-holding faculty with industry experience at companies like Google, IBM, and local enterprises.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programmes Section -->
+    <section class="programmes-section" id="programmes">
+        <div class="container">
+            <h2 class="section-title fade-in-up animated-gradient">Academic Programmes</h2>
+            <div class="programme-cards">
+                <div class="programme-card fade-in-up stagger-delay-1" data-programme="diploma">
+                    <h3>Diploma in ICT</h3>
+                    <div class="programme-meta">
+                        <span><i class="fas fa-chart-line"></i> NQF Level 6</span>
+                        <span><i class="far fa-clock"></i> 3 Years</span>
+                    </div>
+                    <p>Comprehensive foundation in programming, databases, web development, and systems analysis. Includes 6-month industry internship.</p>
+                    <button class="btn btn-outline focus-visible view-details-btn" data-programme="diploma">
+                        View Details
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="programme-card fade-in-up stagger-delay-2" data-programme="extended">
+                    <h3>Extended Curriculum Programme</h3>
+                    <div class="programme-meta">
+                        <span><i class="fas fa-chart-line"></i> NQF Level 5-6</span>
+                        <span><i class="far fa-clock"></i> 4 Years</span>
+                    </div>
+                    <p>Extended foundation year with additional academic support, followed by the standard diploma curriculum.</p>
+                    <button class="btn btn-outline focus-visible view-details-btn" data-programme="extended">
+                        View Details
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="programme-card fade-in-up stagger-delay-3" data-programme="advanced">
+                    <h3>Advanced Diploma in ICT</h3>
+                    <div class="programme-meta">
+                        <span><i class="fas fa-chart-line"></i> NQF Level 7</span>
+                        <span><i class="far fa-clock"></i> 1 Year</span>
+                    </div>
+                    <p>Specialized advanced studies focusing on emerging technologies, IT management, and research methodology.</p>
+                    <button class="btn btn-outline focus-visible view-details-btn" data-programme="advanced">
+                        View Details
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialization Section -->
+    <section class="specialization-section" id="specializations">
+        <div class="container">
+            <h2 class="section-title fade-in-up animated-gradient">Specialization Tracks</h2>
+            <div class="specialization-blocks">
+                <div class="specialization-block fade-in-up stagger-delay-1">
+                    <div class="block-content">
+                        <h3 class="animated-gradient">
+                            <i class="fas fa-code"></i>
+                            Software Development
+                        </h3>
+                        <p>Master modern programming languages including Python, Java, and JavaScript. Learn full-stack development, mobile app creation, cloud computing, and agile methodologies.</p>
+                        <p><strong>Career paths:</strong> Software Engineer, Full-Stack Developer, Mobile App Developer, DevOps Engineer</p>
+                    </div>
+                    <div class="block-image">
+                        <picture>
+                            <source srcset="https://images.unsplash.com/photo-1516116216624-53e697fedbea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80&fm=webp" type="image/webp">
+                            <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                 alt="Modern IDE with code on computer screen"
+                                 loading="lazy">
+                        </picture>
+                    </div>
+                </div>
+                <div class="specialization-block fade-in-up stagger-delay-2">
+                    <div class="block-content">
+                        <h3 class="animated-gradient">
+                            <i class="fas fa-network-wired"></i>
+                            Networking & Infrastructure
+                        </h3>
+                        <p>Design, implement, and manage secure network infrastructures. Study routing, switching, network security, cloud networking, and wireless technologies.</p>
+                        <p><strong>Career paths:</strong> Network Engineer, Security Analyst, Cloud Architect, Systems Administrator</p>
+                    </div>
+                    <div class="block-image">
+                        <picture>
+                            <source srcset="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80&fm=webp" type="image/webp">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                 alt="Professional server rack with network cables"
+                                 loading="lazy">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="facilities-section" id="facilities">
+        <div class="container">
+            <h2 class="section-title fade-in-up animated-gradient">State-of-the-Art Facilities</h2>
+            <div class="facilities-banner fade-in-up">
+                <picture>
+                    <source srcset="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80&fm=webp" type="image/webp">
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                         alt="Modern university computer laboratory"
+                         loading="lazy">
+                </picture>
+                <div class="banner-text">
+                    <h3>Advanced Learning Environment</h3>
+                    <p>Access cutting-edge technology in our purpose-built facilities</p>
+                </div>
+            </div>
+            <div class="facilities-grid">
+                <div class="facility-item fade-in-up stagger-delay-1">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Programming Labs</h3>
+                    <p>Dedicated spaces with dual monitors and modern development environments</p>
+                </div>
+                <div class="facility-item fade-in-up stagger-delay-2">
+                    <i class="fas fa-server"></i>
+                    <h3>Networking Labs</h3>
+                    <p>Hands-on experience with enterprise networking equipment</p>
+                </div>
+                <div class="facility-item fade-in-up stagger-delay-3">
+                    <i class="fas fa-wifi"></i>
+                    <h3>High-speed Internet</h3>
+                    <p>10 Gbps fiber-optic connectivity for research and development</p>
+                </div>
+                <div class="facility-item fade-in-up stagger-delay-4">
+                    <i class="fas fa-users"></i>
+                    <h3>Project Spaces</h3>
+                    <p>Collaborative areas with smart boards and meeting rooms</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Your Journey Carousel -->
+    <section class="journey-section" id="journey">
+        <div class="container">
+            <h2 class="section-title fade-in-up animated-gradient">Start Your Journey</h2>
+            <div class="carousel-container fade-in-up">
+                <div class="carousel-track" id="carouselTrack"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section class="careers-section" id="careers">
+        <div class="container">
+            <h2 class="section-title fade-in-up animated-gradient">Graduate Career Paths</h2>
+            <div class="careers-grid">
+                <div class="career-card fade-in-up stagger-delay-1">
+                    <div class="career-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Software Developer</h3>
+                    <p>Design, code, test, and maintain software applications and systems</p>
+                </div>
+                <div class="career-card fade-in-up stagger-delay-2">
+                    <div class="career-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Network Technician</h3>
+                    <p>Install, configure, and maintain network infrastructure and security systems</p>
+                </div>
+                <div class="career-card fade-in-up stagger-delay-3">
+                    <div class="career-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Systems Administrator</h3>
+                    <p>Manage and maintain organizational IT systems and cloud infrastructure</p>
+                </div>
+                <div class="career-card fade-in-up stagger-delay-4">
+                    <div class="career-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>IT Support Specialist</h3>
+                    <p>Provide technical assistance and support users with hardware and software</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-content fade-in-up">
+                <h2>Start Your Journey in ICT</h2>
+                <p>Join our community of innovators and prepare for a rewarding career in the digital age.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary focus-visible" id="applyNowBtn">
+                        <i class="fas fa-file-alt"></i>
+                        Apply Now
+                    </button>
+                    <button class="btn btn-secondary focus-visible" id="scheduleTourBtn">
+                        <i class="fas fa-calendar-alt"></i>
+                        Schedule Tour
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section fade-in-up">
+                    <h3>Department of ICT</h3>
+                    <p>Faculty of Engineering and Technology</p>
+                    <p>Mangosuthu University of Technology</p>
+                    <p>Leading digital education since 2005</p>
+                </div>
+                <div class="footer-section fade-in-up stagger-delay-1">
+                    <h3>Contact Information</h3>
+                    <div class="contact-info">
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@mut.ac.za</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            <span>031 907 7111</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>MUT Campus, Umlazi, Durban</span>
+                        </p>
+                        <p>
+                            <i class="far fa-clock"></i>
+                            <span>Mon-Fri: 8:00 AM - 5:00 PM</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-section fade-in-up stagger-delay-2">
+                    <h3>Connect With Us</h3>
+                    <p>Follow MUT on social media for updates and events</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/MUTUmlazi/" target="_blank" rel="noopener noreferrer" class="focus-visible" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://x.com/MUTcampus" target="_blank" rel="noopener noreferrer" class="focus-visible" aria-label="X (Twitter)">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/school/mangosuthu-university-of-technology/" target="_blank" rel="noopener noreferrer" class="focus-visible" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mut_campus?fbclid=IwY2xjawP5SWtleHRuA2FlbQIxMABicmlkETFEZ1ltcnc0RHhzOGZ1cEN6c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgMJaMg3TDbRVzE4kllpbv454q8rI83AkH6gOP96_nNsuVALJSOHLxTzGtjz_aem_851S6d9DpY2VIogUY-m8Sg" target="_blank" rel="noopener noreferrer" class="focus-visible" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/c/MangosuthuUniversityofTechnology" target="_blank" rel="noopener noreferrer" class="focus-visible" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@mutcampus?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="focus-visible" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright fade-in-up stagger-delay-3">
+                <p>&copy; <span id="currentYear"></span> Department of Information and Communication Technology. All rights reserved.</p>
+                <p>Mangosuthu University of Technology | Designed with <i class="fas fa-heart" style="color: #ef4444;"></i> for the future of technology education</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== CHATBOT ASSISTANT ===== -->
+    <div class="chatbot-container">
+        <button class="chatbot-button" id="chatbotButton">
+            <i class="fas fa-robot"></i>
+        </button>
+        <div class="chatbot-panel" id="chatbotPanel">
+            <div class="chatbot-header">
+                <i class="fas fa-robot"></i>
+                <div>
+                    <h3>ICT Assistant</h3>
+                    <p>How can we help you today?</p>
+                </div>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>👋 Hello! I'm the ICT Department Assistant. I can help you with:</p>
+                        <p>• Programme information<br>• Admission requirements<br>• Application process<br>• Campus tours<br>• Facilities and labs<br>• Career paths</p>
+                        <p>What would you like to know?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="quick-replies" id="quickReplies">
+                <button class="quick-reply-btn" data-query="programmes">📚 Programmes</button>
+                <button class="quick-reply-btn" data-query="admission">🎓 Admission</button>
+                <button class="quick-reply-btn" data-query="apply">📝 Apply</button>
+                <button class="quick-reply-btn" data-query="tour">🏛️ Campus Tour</button>
+                <button class="quick-reply-btn" data-query="careers">💼 Careers</button>
+                <button class="quick-reply-btn" data-query="contact">📞 Contact</button>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbotInput" placeholder="Type your message..." aria-label="Type your message">
+                <button id="sendMessageBtn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Apply Now Modal -->
+    <div class="modal" id="applyNowModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Apply for Admission</h2>
+                <button class="close-modal focus-visible" id="closeApplyModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="success-message" id="applySuccessMessage">
+                    <i class="fas fa-check-circle"></i>
+                    Your application has been submitted successfully! We will contact you within 3 working days.
+                </div>
+                <form id="applicationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" class="form-control" required placeholder="Enter your first name">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" class="form-control" required placeholder="Enter your last name">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" class="form-control" required placeholder="Enter your email address">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" class="form-control" required placeholder="Enter your phone number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="programme">Programme of Interest *</label>
+                        <select id="programme" class="form-control" required>
+                            <option value="">Select a programme</option>
+                            <option value="diploma">Diploma in ICT</option>
+                            <option value="extended">Extended Curriculum Programme</option>
+                            <option value="advanced">Advanced Diploma in ICT</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="intake">Preferred Intake *</label>
+                        <select id="intake" class="form-control" required>
+                            <option value="">Select intake period</option>
+                            <option value="feb2026">February 2026</option>
+                            <option value="jul2026">July 2026</option>
+                            <option value="feb2027">February 2027</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="qualification">Highest Qualification *</label>
+                        <select id="qualification" class="form-control" required>
+                            <option value="">Select your highest qualification</option>
+                            <option value="matric">National Senior Certificate</option>
+                            <option value="certificate">Certificate in IT</option>
+                            <option value="diploma">Diploma/Degree</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Information</label>
+                        <textarea id="message" class="form-control" placeholder="Tell us about your background and why you want to study ICT"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="newsletter" checked>
+                            <label for="newsletter">Receive updates about programmes and events</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">I agree to the terms and conditions *</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" id="submitApplication">
+                            <i class="fas fa-paper-plane"></i>
+                            Submit Application
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="cancelApply">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Schedule Tour Modal -->
+    <div class="modal" id="scheduleTourModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Schedule a Campus Tour</h2>
+                <button class="close-modal focus-visible" id="closeTourModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="success-message" id="tourSuccessMessage">
+                    <i class="fas fa-check-circle"></i>
+                    Your tour has been scheduled successfully! We'll send you a confirmation email with details.
+                </div>
+                <form id="tourForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tourFirstName">First Name *</label>
+                            <input type="text" id="tourFirstName" class="form-control" required placeholder="Enter your first name">
+                        </div>
+                        <div class="form-group">
+                            <label for="tourLastName">Last Name *</label>
+                            <input type="text" id="tourLastName" class="form-control" required placeholder="Enter your last name">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tourEmail">Email Address *</label>
+                        <input type="email" id="tourEmail" class="form-control" required placeholder="Enter your email address">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tourPhone">Phone Number</label>
+                        <input type="tel" id="tourPhone" class="form-control" placeholder="Enter your phone number (optional)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tourDateTime">Preferred Date and Time *</label>
+                        <input type="datetime-local" id="tourDateTime" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tourGroupSize">Number of People *</label>
+                        <select id="tourGroupSize" class="form-control" required>
+                            <option value="">Select group size</option>
+                            <option value="1">Just me</option>
+                            <option value="2">2 people</option>
+                            <option value="3">3 people</option>
+                            <option value="4">4 people</option>
+                            <option value="5+">5+ people</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tourNotes">Special Requests</label>
+                        <textarea id="tourNotes" class="form-control" placeholder="Any special requirements or questions"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" id="submitTour">
+                            <i class="fas fa-calendar-check"></i>
+                            Schedule Tour
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="cancelTour">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Programme Details Modal -->
+    <div class="modal" id="programmeDetailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="programmeModalTitle">Programme Details</h2>
+                <button class="close-modal focus-visible" id="closeProgrammeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="programmeModalContent"></div>
+        </div>
+    </div>
+
+    <!-- Contact Department Modal -->
+    <div class="modal" id="contactDeptModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Contact Department</h2>
+                <button class="close-modal focus-visible" id="closeContactModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="success-message" id="contactSuccessMessage">
+                    <i class="fas fa-check-circle"></i>
+                    Your message has been sent successfully! We'll respond within 24 hours.
+                </div>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactFirstName">First Name *</label>
+                            <input type="text" id="contactFirstName" class="form-control" required placeholder="Enter your first name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactLastName">Last Name *</label>
+                            <input type="text" id="contactLastName" class="form-control" required placeholder="Enter your last name">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactEmail">Email Address *</label>
+                        <input type="email" id="contactEmail" class="form-control" required placeholder="Enter your email address">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactSubject">Subject *</label>
+                        <select id="contactSubject" class="form-control" required>
+                            <option value="">Select subject</option>
+                            <option value="admissions">Admissions Inquiry</option>
+                            <option value="programmes">Programme Information</option>
+                            <option value="facilities">Facilities Tour</option>
+                            <option value="partnership">Industry Partnership</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactMessage">Message *</label>
+                        <textarea id="contactMessage" class="form-control" required placeholder="How can we help you?" rows="5"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" id="submitContact">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="cancelContact">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===== WEBP SUPPORT DETECTION =====
+        function checkWebPSupport() {
+            const canvas = document.createElement('canvas');
+            if (canvas.getContext && canvas.getContext('2d')) {
+                return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+            }
+            return false;
+        }
+
+        if (checkWebPSupport()) {
+            document.documentElement.classList.add('webp');
+        }
+
+        // ===== FIXED THEME TOGGLE =====
+        function setupThemeToggle() {
+            const themeToggle = document.getElementById('themeToggle');
+            const icon = themeToggle.querySelector('i');
+            
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            icon.className = savedTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+            
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+            });
+        }
+
+        // ===== NAVIGATION HIDE ON SCROLL =====
+        function setupNavigation() {
+            const navbar = document.getElementById('navbar');
+            let lastScrollY = window.scrollY;
+            let isNavbarHidden = false;
+
+            window.addEventListener('scroll', () => {
+                const currentScrollY = window.scrollY;
+                
+                if (currentScrollY < 100) {
+                    navbar.classList.remove('hidden');
+                    isNavbarHidden = false;
+                    lastScrollY = currentScrollY;
+                    return;
+                }
+
+                if (currentScrollY > lastScrollY && !isNavbarHidden) {
+                    navbar.classList.add('hidden');
+                    isNavbarHidden = true;
+                } else if (currentScrollY < lastScrollY && isNavbarHidden) {
+                    navbar.classList.remove('hidden');
+                    isNavbarHidden = false;
+                }
+
+                lastScrollY = currentScrollY;
+            });
+        }
+
+        // ===== ENHANCED CAROUSEL WITH HOVER TEXT =====
+        function setupCarousel() {
+            const carouselTrack = document.getElementById('carouselTrack');
+            
+            const carouselData = [
+                {
+                    image: 'https://i.postimg.cc/vTH4mMH5/Network.jpg',
+                    title: 'Networking Lab',
+                    description: 'Hands-on experience with enterprise networking equipment'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+                    title: 'Programming Session',
+                    description: 'Learn modern programming languages and frameworks'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+                    title: 'Collaborative Learning',
+                    description: 'Work together on real-world projects'
+                },
+                {
+                    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+                    title: 'Industry Events',
+                    description: 'Connect with tech industry leaders'
+                },
+                {
+                    image: 'https://i.postimg.cc/2jc6xs5j/sd.jpg',
+                    title: 'Software Development',
+                    description: 'Build innovative applications and solutions'
+                }
+            ];
+
+            const allItems = [...carouselData, ...carouselData];
+
+            carouselTrack.innerHTML = '';
+            allItems.forEach((item, index) => {
+                const carouselItem = document.createElement('div');
+                carouselItem.className = 'carousel-item';
+                
+                carouselItem.innerHTML = `
+                    <picture>
+                        <source srcset="${item.image.replace(/\.(jpg|jpeg|png)$/, '.webp')}" type="image/webp">
+                        <img src="${item.image}" 
+                             alt="${item.title}"
+                             loading="lazy">
+                    </picture>
+                    <div class="carousel-overlay">
+                        <h3>${item.title}</h3>
+                        <p>${item.description}</p>
+                    </div>
+                `;
+                
+                carouselTrack.appendChild(carouselItem);
+            });
+        }
+
+        // ===== STATISTICS COUNTER =====
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 60;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + '+';
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }
+
+        function setupStatistics() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        const target = parseInt(element.getAttribute('data-count'));
+                        
+                        if (!element.classList.contains('animated')) {
+                            animateCounter(element, target);
+                            element.classList.add('animated');
+                        }
+                        
+                        observer.unobserve(element);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            statNumbers.forEach(stat => observer.observe(stat));
+        }
+
+        // ===== TOUR DATE-TIME SETUP =====
+        function setupTourDateTime() {
+            const tourDateTimeInput = document.getElementById('tourDateTime');
+            
+            if (tourDateTimeInput) {
+                const tomorrow = new Date();
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                tomorrow.setHours(9, 0, 0, 0);
+                
+                const year = tomorrow.getFullYear();
+                const month = String(tomorrow.getMonth() + 1).padStart(2, '0');
+                const day = String(tomorrow.getDate()).padStart(2, '0');
+                const hours = String(tomorrow.getHours()).padStart(2, '0');
+                const minutes = String(tomorrow.getMinutes()).padStart(2, '0');
+                
+                const minDateTime = `${year}-${month}-${day}T${hours}:${minutes}`;
+                tourDateTimeInput.min = minDateTime;
+                tourDateTimeInput.value = minDateTime;
+            }
+        }
+
+        // ===== MODAL FUNCTIONS =====
+        function openModal(modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            setTimeout(() => {
+                const firstInput = modal.querySelector('input, select, textarea');
+                if (firstInput) firstInput.focus();
+            }, 100);
+        }
+
+        function closeModal(modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // ===== FORM SUBMISSIONS =====
+        function setupForms() {
+            const applicationForm = document.getElementById('applicationForm');
+            const applySuccessMessage = document.getElementById('applySuccessMessage');
+            
+            if (applicationForm) {
+                applicationForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = document.getElementById('submitApplication');
+                    submitBtn.classList.add('loading');
+                    
+                    setTimeout(() => {
+                        applySuccessMessage.classList.add('active');
+                        submitBtn.classList.remove('loading');
+                        
+                        setTimeout(() => {
+                            applicationForm.reset();
+                            applySuccessMessage.classList.remove('active');
+                            closeModal(document.getElementById('applyNowModal'));
+                        }, 3000);
+                    }, 2000);
+                });
+            }
+
+            const tourForm = document.getElementById('tourForm');
+            const tourSuccessMessage = document.getElementById('tourSuccessMessage');
+            
+            if (tourForm) {
+                tourForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = document.getElementById('submitTour');
+                    submitBtn.classList.add('loading');
+                    
+                    setTimeout(() => {
+                        tourSuccessMessage.classList.add('active');
+                        submitBtn.classList.remove('loading');
+                        
+                        setTimeout(() => {
+                            tourForm.reset();
+                            setupTourDateTime();
+                            tourSuccessMessage.classList.remove('active');
+                            closeModal(document.getElementById('scheduleTourModal'));
+                        }, 3000);
+                    }, 2000);
+                });
+            }
+
+            const contactForm = document.getElementById('contactForm');
+            const contactSuccessMessage = document.getElementById('contactSuccessMessage');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = document.getElementById('submitContact');
+                    submitBtn.classList.add('loading');
+                    
+                    setTimeout(() => {
+                        contactSuccessMessage.classList.add('active');
+                        submitBtn.classList.remove('loading');
+                        
+                        setTimeout(() => {
+                            contactForm.reset();
+                            contactSuccessMessage.classList.remove('active');
+                            closeModal(document.getElementById('contactDeptModal'));
+                        }, 3000);
+                    }, 2000);
+                });
+            }
+        }
+
+        // ===== MOBILE NAVIGATION =====
+        function setupMobileNav() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('navMenu');
+            
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = hamburger.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+                document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+            });
+
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    hamburger.querySelector('i').classList.add('fa-bars');
+                    hamburger.querySelector('i').classList.remove('fa-times');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+
+        // ===== MODAL SETUP =====
+        function setupModals() {
+            document.getElementById('applyNowBtn').addEventListener('click', () => {
+                openModal(document.getElementById('applyNowModal'));
+            });
+            
+            document.getElementById('scheduleTourBtn').addEventListener('click', () => {
+                setupTourDateTime();
+                openModal(document.getElementById('scheduleTourModal'));
+            });
+            
+            document.getElementById('contactDeptBtn').addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal(document.getElementById('contactDeptModal'));
+            });
+
+            const closeButtons = [
+                'closeApplyModal', 'closeTourModal', 'closeProgrammeModal', 'closeContactModal',
+                'cancelApply', 'cancelTour', 'cancelContact'
+            ];
+
+            closeButtons.forEach(id => {
+                const btn = document.getElementById(id);
+                if (btn) {
+                    btn.addEventListener('click', () => {
+                        const modal = btn.closest('.modal');
+                        closeModal(modal);
+                    });
+                }
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target.classList.contains('modal')) {
+                    closeModal(e.target);
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    document.querySelectorAll('.modal.active').forEach(modal => {
+                        closeModal(modal);
+                    });
+                }
+            });
+        }
+
+        // ===== PROGRAMME DETAILS =====
+        function setupProgrammeDetails() {
+            const programmeData = {
+                diploma: {
+                    title: "Diploma in ICT",
+                    nqf: "NQF Level 6",
+                    duration: "3 Years Full-time",
+                    description: "A comprehensive programme that provides a solid foundation in Information and Communication Technology. This diploma equips students with practical skills in software development, networking, and systems analysis.",
+                    highlights: [
+                        "6-month industry internship included",
+                        "Microsoft and Cisco certification pathways",
+                        "Access to 24/7 computer labs",
+                        "Career placement assistance"
+                    ],
+                    curriculum: {
+                        year1: [
+                            "Introduction to Programming",
+                            "Computer Systems Fundamentals",
+                            "Web Development Basics",
+                            "Mathematics for Computing"
+                        ],
+                        year2: [
+                            "Object-Oriented Programming",
+                            "Database Management Systems",
+                            "Network Fundamentals",
+                            "Systems Analysis & Design"
+                        ],
+                        year3: [
+                            "Software Engineering",
+                            "Network Administration",
+                            "IT Project Management",
+                            "Industry Internship"
+                        ]
+                    },
+                    requirements: [
+                        "National Senior Certificate with diploma admission",
+                        "Minimum 50% in Mathematics or 60% in Mathematical Literacy",
+                        "English (50% minimum)"
+                    ],
+                    fees: "Approximately R45,000 per year"
+                },
+                extended: {
+                    title: "Extended Curriculum Programme",
+                    nqf: "NQF Level 5-6",
+                    duration: "4 Years Full-time",
+                    description: "An extended programme designed for students who need additional academic support. Includes a foundation year to build essential skills.",
+                    highlights: [
+                        "Extended foundation year with smaller classes",
+                        "Additional academic support services",
+                        "Focus on study skills and academic literacy",
+                        "Same qualification as standard diploma"
+                    ],
+                    curriculum: {
+                        foundation: [
+                            "Academic Literacy",
+                            "Basic Programming Concepts",
+                            "Mathematics Foundation",
+                            "Computer Literacy"
+                        ],
+                        year1: [
+                            "Introduction to Programming",
+                            "Computer Systems Fundamentals",
+                            "Web Development Basics",
+                            "Communication Skills"
+                        ],
+                        year2: [
+                            "Object-Oriented Programming",
+                            "Database Management Systems",
+                            "Network Fundamentals",
+                            "Systems Analysis & Design"
+                        ],
+                        year3: [
+                            "Software Engineering",
+                            "Network Administration",
+                            "IT Project Management",
+                            "Final Year Project"
+                        ]
+                    },
+                    requirements: [
+                        "National Senior Certificate",
+                        "Minimum 40% in Mathematics or 50% in Mathematical Literacy",
+                        "English (40% minimum)"
+                    ],
+                    fees: "Approximately R40,000 per year"
+                },
+                advanced: {
+                    title: "Advanced Diploma in ICT",
+                    nqf: "NQF Level 7",
+                    duration: "1 Year Full-time",
+                    description: "A specialized postgraduate programme focusing on emerging technologies and IT management.",
+                    highlights: [
+                        "Specialization tracks available",
+                        "Research project component",
+                        "Industry mentorship programme",
+                        "Advanced certification preparation"
+                    ],
+                    curriculum: {
+                        semester1: [
+                            "Advanced Software Development",
+                            "Cloud Computing Technologies",
+                            "Research Methodology",
+                            "IT Governance & Compliance"
+                        ],
+                        semester2: [
+                            "Cybersecurity Management",
+                            "Emerging Technologies",
+                            "IT Project Leadership",
+                            "Research Project"
+                        ]
+                    },
+                    requirements: [
+                        "Diploma in ICT or related field (NQF Level 6)",
+                        "Minimum 60% average in prior studies",
+                        "Letter of motivation"
+                    ],
+                    fees: "Approximately R55,000 per year"
+                }
+            };
+
+            document.querySelectorAll('.view-details-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const programmeType = this.getAttribute('data-programme');
+                    const programme = programmeData[programmeType];
+                    
+                    document.getElementById('programmeModalTitle').textContent = programme.title;
+                    
+                    const modalContent = document.getElementById('programmeModalContent');
+                    modalContent.innerHTML = `
+                        <div class="programme-header">
+                            <h3 class="animated-gradient">${programme.title}</h3>
+                            <div class="programme-highlights">
+                                <div class="highlight-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span><strong>NQF Level:</strong> ${programme.nqf}</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="far fa-clock"></i>
+                                    <span><strong>Duration:</strong> ${programme.duration}</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span><strong>Fees:</strong> ${programme.fees}</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="programme-overview">
+                            <h4>Overview</h4>
+                            <p>${programme.description}</p>
+                        </div>
+                        
+                        <div class="programme-highlights-section">
+                            <h4>Key Highlights</h4>
+                            <ul class="requirements-list">
+                                ${programme.highlights.map(item => `<li><i class="fas fa-check-circle"></i> ${item}</li>`).join('')}
+                            </ul>
+                        </div>
+                        
+                        <div class="curriculum-section">
+                            <h4>Curriculum Structure</h4>
+                            <div class="curriculum-grid">
+                                ${Object.entries(programme.curriculum).map(([year, modules]) => `
+                                    <div class="year-section">
+                                        <h5>${year.charAt(0).toUpperCase() + year.slice(1)}</h5>
+                                        <ul class="module-list">
+                                            ${modules.map(module => `<li><i class="fas fa-book"></i> ${module}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        
+                        <div class="admission-requirements">
+                            <h4>Admission Requirements</h4>
+                            <ul class="requirements-list">
+                                ${programme.requirements.map(req => `<li><i class="fas fa-clipboard-check"></i> ${req}</li>`).join('')}
+                            </ul>
+                        </div>
+                        
+                        <div class="apply-section">
+                            <button class="btn btn-primary" id="applyFromDetails">
+                                <i class="fas fa-file-alt"></i>
+                                Apply for this Programme
+                            </button>
+                        </div>
+                    `;
+
+                    openModal(document.getElementById('programmeDetailsModal'));
+
+                    setTimeout(() => {
+                        const applyFromDetailsBtn = document.getElementById('applyFromDetails');
+                        if (applyFromDetailsBtn) {
+                            applyFromDetailsBtn.addEventListener('click', () => {
+                                closeModal(document.getElementById('programmeDetailsModal'));
+                                setTimeout(() => {
+                                    openModal(document.getElementById('applyNowModal'));
+                                    const programmeSelect = document.getElementById('programme');
+                                    if (programmeSelect) {
+                                        programmeSelect.value = programmeType;
+                                    }
+                                }, 300);
+                            });
+                        }
+                    }, 100);
+                });
+            });
+        }
+
+        // ===== SMOOTH SCROLLING =====
+        function setupSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+                    
+                    e.preventDefault();
+                    
+                    const targetElement = document.querySelector(href);
+                    if (targetElement) {
+                        const offset = 100;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        history.pushState(null, null, href);
+                    }
+                });
+            });
+        }
+
+        // ===== REAL-TIME CLOCK =====
+        function updateDateTime() {
+            const now = new Date();
+            const timeElement = document.querySelector('.time-info span');
+            const dateElement = document.querySelector('.date-info span');
+            
+            if (timeElement) {
+                const hours = now.getHours().toString().padStart(2, '0');
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                timeElement.textContent = `ENG ${hours}:${minutes}`;
+            }
+            
+            if (dateElement) {
+                const year = now.getFullYear();
+                const month = (now.getMonth() + 1).toString().padStart(2, '0');
+                const day = now.getDate().toString().padStart(2, '0');
+                dateElement.textContent = `${year}/${month}/${day}`;
+            }
+        }
+
+        // ===== SCROLL ANIMATIONS =====
+        function setupScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in-up');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-up').forEach(el => {
+                el.classList.remove('fade-in-up');
+                observer.observe(el);
+            });
+        }
+
+        // ===== CHATBOT ASSISTANT =====
+        function setupChatbot() {
+            const chatbotButton = document.getElementById('chatbotButton');
+            const chatbotPanel = document.getElementById('chatbotPanel');
+            const chatbotInput = document.getElementById('chatbotInput');
+            const sendMessageBtn = document.getElementById('sendMessageBtn');
+            const chatbotMessages = document.getElementById('chatbotMessages');
+            const quickReplyBtns = document.querySelectorAll('.quick-reply-btn');
+
+            // Toggle chatbot panel
+            chatbotButton.addEventListener('click', () => {
+                chatbotPanel.classList.toggle('active');
+                if (chatbotPanel.classList.contains('active')) {
+                    chatbotInput.focus();
+                }
+            });
+
+            // Send message function
+            function sendMessage() {
+                const message = chatbotInput.value.trim();
+                if (message === '') return;
+
+                // Add user message
+                addMessage(message, 'user');
+                chatbotInput.value = '';
+
+                // Simulate bot response
+                setTimeout(() => {
+                    const response = getBotResponse(message);
+                    addMessage(response, 'bot');
+                }, 1000);
+            }
+
+            // Add message to chat
+            function addMessage(text, sender) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${sender}`;
+                
+                if (sender === 'bot') {
+                    messageDiv.innerHTML = `
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>${text}</p>
+                        </div>
+                    `;
+                } else {
+                    messageDiv.innerHTML = `
+                        <div class="message-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>${text}</p>
+                        </div>
+                    `;
+                }
+                
+                chatbotMessages.appendChild(messageDiv);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+
+            // Bot response logic
+            function getBotResponse(message) {
+                const lowerMsg = message.toLowerCase();
+                
+                if (lowerMsg.includes('programme') || lowerMsg.includes('course') || lowerMsg.includes('diploma')) {
+                    return "🎓 We offer three main programmes:\n\n• Diploma in ICT (3 years) - NQF Level 6\n• Extended Curriculum Programme (4 years) - NQF Level 5-6\n• Advanced Diploma in ICT (1 year) - NQF Level 7\n\nWould you like details about any specific programme?";
+                }
+                else if (lowerMsg.includes('admission') || lowerMsg.includes('require') || lowerMsg.includes('entry')) {
+                    return "📋 General admission requirements:\n\n• National Senior Certificate\n• Mathematics: 50% (or 60% Mathematical Literacy)\n• English: 50%\n\nSome programmes have specific requirements. Which programme are you interested in?";
+                }
+                else if (lowerMsg.includes('apply') || lowerMsg.includes('application')) {
+                    return "📝 To apply for our programmes:\n\n1. Click the 'Apply Now' button on our website\n2. Complete the online application form\n3. Upload your documents\n4. Submit your application\n\nApplications close 30 days before intake periods in February and July.";
+                }
+                else if (lowerMsg.includes('tour') || lowerMsg.includes('campus') || lowerMsg.includes('visit')) {
+                    return "🏛️ We'd love to show you our campus! You can schedule a tour by:\n\n• Clicking the 'Schedule Tour' button\n• Contacting our department directly\n• Calling 031 907 7111\n\nTours run Mon-Fri, 9am-4pm.";
+                }
+                else if (lowerMsg.includes('career') || lowerMsg.includes('job') || lowerMsg.includes('work')) {
+                    return "💼 Our graduates pursue careers in:\n\n• Software Development\n• Network Engineering\n• Systems Administration\n• IT Support\n• Cloud Computing\n• Cybersecurity\n\n95% of our graduates are employed within 6 months!";
+                }
+                else if (lowerMsg.includes('contact') || lowerMsg.includes('phone') || lowerMsg.includes('email')) {
+                    return "📞 You can reach us at:\n\n• Email: info@mut.ac.za\n• Phone: 031 907 7111\n• Location: MUT Campus, Building A, Floor 3\n• Hours: Mon-Fri, 8am-5pm";
+                }
+                else if (lowerMsg.includes('facilities') || lowerMsg.includes('lab') || lowerMsg.includes('equipment')) {
+                    return "🔬 Our facilities include:\n\n• 24/7 Programming Labs with dual monitors\n• Networking Labs with Cisco equipment\n• 10 Gbps fiber internet\n• Collaborative project spaces\n• Smart classrooms with modern AV";
+                }
+                else if (lowerMsg.includes('specialization') || lowerMsg.includes('track') || lowerMsg.includes('stream')) {
+                    return "⚡ We offer two specialization tracks:\n\n1. Software Development\n   - Full-stack development\n   - Mobile apps\n   - Cloud computing\n\n2. Networking & Infrastructure\n   - Network security\n   - Cloud architecture\n   - Systems administration";
+                }
+                else if (lowerMsg.includes('hello') || lowerMsg.includes('hi') || lowerMsg.includes('hey')) {
+                    return "👋 Hello! How can I help you today? You can ask me about:\n\n• Programmes\n• Admission requirements\n• Application process\n• Campus tours\n• Careers\n• Facilities\n• Contact information";
+                }
+                else {
+                    return "🤔 I'm not sure about that. Could you please rephrase your question? You can ask me about:\n\n• Programmes\n• Admission requirements\n• Application process\n• Campus tours\n• Careers\n• Facilities\n• Contact information";
+                }
+            }
+
+            // Send message on button click
+            sendMessageBtn.addEventListener('click', sendMessage);
+
+            // Send message on Enter key
+            chatbotInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+
+            // Quick reply buttons
+            quickReplyBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const query = btn.dataset.query;
+                    let message = '';
+                    
+                    switch(query) {
+                        case 'programmes':
+                            message = 'Tell me about your programmes';
+                            break;
+                        case 'admission':
+                            message = 'What are the admission requirements?';
+                            break;
+                        case 'apply':
+                            message = 'How do I apply?';
+                            break;
+                        case 'tour':
+                            message = 'I want to schedule a campus tour';
+                            break;
+                        case 'careers':
+                            message = 'What careers can I pursue?';
+                            break;
+                        case 'contact':
+                            message = 'How can I contact the department?';
+                            break;
+                    }
+                    
+                    addMessage(message, 'user');
+                    chatbotInput.value = '';
+                    
+                    setTimeout(() => {
+                        const response = getBotResponse(message);
+                        addMessage(response, 'bot');
+                    }, 1000);
+                });
+            });
+
+            // Close chatbot when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!chatbotPanel.contains(e.target) && !chatbotButton.contains(e.target)) {
+                    chatbotPanel.classList.remove('active');
+                }
+            });
+        }
+
+        // ===== INITIALIZE EVERYTHING =====
+        document.addEventListener('DOMContentLoaded', function() {
+            setupCarousel();
+            setupThemeToggle();
+            setupNavigation();
+            setupStatistics();
+            setupForms();
+            setupMobileNav();
+            setupModals();
+            setupProgrammeDetails();
+            setupSmoothScroll();
+            setupScrollAnimations();
+            setupChatbot();
+            
+            updateDateTime();
+            setInterval(updateDateTime, 60000);
+            
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
